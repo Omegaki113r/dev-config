@@ -25,15 +25,25 @@ sudo pacman -S hyprland
 sudo pacman -S hyprpaper
 ```
 - Notification Daemon
-> `sudo pacman -S swaync`
+```bash
+sudo pacman -S swaync
+```
 - Application Launcher
-> `sudo pacman -S wofi`
+```bash
+sudo pacman -S wofi
+```
 - File Manager
-> `sudo pacman -S dolphin`
+```bash
+sudo pacman -S dolphin
+```
 - Terminul Multiplexer
-> `sudo pacman -S tmux`
+```bash
+sudo pacman -S tmux
+```
 - Text Editor
-> `sudo pacmand -S neovim`
+```bash
+sudo pacmand -S neovim
+```
 - Git
 ```bash 
 sudo pacman -S git
