@@ -1,6 +1,6 @@
 # Prerequisites
 - Minimal setup of Linux
---
+---
 # Setup
 - Update/Upgrate OS
 ```bash
@@ -60,7 +60,7 @@ sudo pacman -S git
     ```bash
     yay -S librewolf
     ```
-
+---
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
