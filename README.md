@@ -1,7 +1,7 @@
 ## Table of Contents
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
-- [Configure & Authenticate with github](#configure-authenticate-with-github)
+- [Configure and Authenticate with github](#configure-and-authenticate-with-github)
 - [Installing JetBrainsMono NerdFont](#installing-jetbrainsmono-nerdfont)
 ---
 # Prerequisites
@@ -73,7 +73,7 @@ sudo pacman -S openssh
 ```bash
 sudo pacman -S wget
 ```
-# Configure & Authenticate with github
+# Configure and Authenticate with github
 - Generate SSH key
 ```bash
 ssh-keygen -t ed25519 -C <EMAIL ADDRESS>
