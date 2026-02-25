@@ -25,10 +25,11 @@
 - Text Editor
 > `sudo pacmand -S neovim`
 - Git
-> `bash sudo pacman -S git`
+`bash 
+sudo pacman -S git
 - AUR Helper
 [Jguer/yay](https://github.com/Jguer/yay)
-> ```bash
+```bash
     sudo pacman -S needed git base-devel
     git clone https://aur.archlinux.org/yay.git
     cd yay
