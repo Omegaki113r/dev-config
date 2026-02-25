@@ -109,15 +109,33 @@ git config --global user.email <GITHUB EMAIL>
         AddKeysToAgent yes
         IdentityFile ~/.ssh/id_ed25519
     ```
+- Installing JetBrainsMono NerdFont
+    * Create Directory for font
+    ```bash
+    mkdir -p /usr/share/fonts/JetBrainsMono
+    ```
+    * Download JetBrainsMono font
+    ```bash
+    wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
+    ```
+    * Unzip & Remove
+    ```bash
+    unzip JetBrainsMono.zip
+    rm JetBrainsMono.zip
+    ```
+    * Rebuilt & Cache font
+    ```bash
+    fc-cache -fv
+    ```
+    * Verify
+    ```bash
+    fc-list | grep -i JetBrainsMono
+    ```
+
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 
-wget https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip
-unzip JetBrainsMono.zip
-rm JetBrainsMono.zip
-
-fc-cache -fv
 
 
 
