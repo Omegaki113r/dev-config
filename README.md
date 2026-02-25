@@ -66,22 +66,44 @@ sudo pacman -S openssh
 ```
 ---
 # Configure & Authenticate with github
+- Generate SSH key
 ```bash
 ssh-keygen -t ed25519 -C <EMAIL ADDRESS>
 ```
+- Start SSH agent
 ```bash
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 ```
 - Copy generated SSH key to clipboard and add the key to github
+- Testing SSH connection
 ```bash
 ssh -T git@github.com
 ```
+- Setting git identity
 ```bash
 git config --global user.name <GITHUB USERNAME>
 git config --global user.email <GITHUB EMAIL>
 ```
-
+- Changing https to ssh
+    * Checking method
+    ```bash
+    git remote -v
+    ```
+    * Changing to ssh if https
+    ```bash
+    git remote set-url origin git@github.com:<USERNAME>/<REPOSITORY>.git
+    ```
+- If passphrase added during ssh-keygen and needs to automate the submitting passphrase
+```bash
+touch ~/.ssh/config
+```
+    * Inside the config file
+    ```bash
+    Host github.com
+        AddKeysToAgent yes
+        IdentityFile ~/.ssh/id_ed25519
+    ```
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
