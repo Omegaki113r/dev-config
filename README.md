@@ -5,7 +5,7 @@
 # Setup
 - Update/Upgrate OS
 
-`sudo pacman -Syu`
+> `sudo pacman -Syu`
 - Install Hyprland
 `sudo pacman -S hyprland`
 - Install Terminal
