@@ -19,6 +19,8 @@ sudo pacman -S hyprland
 ```bash
 sudo pacman -S foot
 ```
+
+
     - Kitty
 ```bash
 sudo pacman -S kitty
