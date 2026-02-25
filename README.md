@@ -1,3 +1,7 @@
+## Table of Contents
+- [Prerequisites](#prerequisites)
+- [Setup](#setup)
+
 # Prerequisites
 - Minimal setup of Linux
 # Setup
