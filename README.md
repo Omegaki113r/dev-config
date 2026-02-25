@@ -4,6 +4,7 @@
 
 # Setup
 - Update/Upgrate OS
+
 `sudo pacman -Syu`
 - Install Hyprland
 `sudo pacman -S hyprland`
