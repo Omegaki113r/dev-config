@@ -1,6 +1,5 @@
 # Prerequisites
 - Minimal setup of Linux
----
 # Setup
 - Update/Upgrate OS
 ```bash
