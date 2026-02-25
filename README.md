@@ -67,7 +67,6 @@ sudo pacman -S openssh
 ```bash
 sudo pacman -S wget
 ```
----
 # Configure & Authenticate with github
 - Generate SSH key
 ```bash
