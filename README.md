@@ -1,7 +1,9 @@
 ## Table of Contents
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
-
+- [Configure & Authenticate with github](#configure&authenticatewithgithub)
+- [Installing JetBrainsMono NerdFont](#installingjetbrainsmononerdfont)
+---
 # Prerequisites
 - Minimal setup of Linux
 # Setup
