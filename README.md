@@ -1,5 +1,7 @@
+<details>
 # Prerequisites
 - Minimal setup of Linux
+</details>
 ---
 
 # Setup
