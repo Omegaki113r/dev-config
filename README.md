@@ -15,13 +15,11 @@ sudo pacman -S hyprland
 ```
 
 - Install Terminal [^1]
-    - Foot
+    * Foot
 ```bash
 sudo pacman -S foot
 ```
-
-
-    - Kitty
+    * Kitty
 ```bash
 sudo pacman -S kitty
 ```
