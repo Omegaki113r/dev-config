@@ -19,7 +19,7 @@ sudo pacman -S hyprland
     * Kitty
     ```bash
     sudo pacman -S kitty
-    ``
+    ```
 - Wallpaper utility
 ```bash
 sudo pacman -S hyprpaper
