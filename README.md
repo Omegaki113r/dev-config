@@ -16,13 +16,13 @@ sudo pacman -S hyprland
 
 - Install Terminal [^1]
 
-### Foot
+-- Foot
 ```bash
 sudo pacman -S foot
 ``` 
 
 ### Kitty
-> `sudo pacman -S kitty` [^2]
+> `sudo pacman -S kitty`
 - Wallpaper utility
 > `sudo pacman -S hyprpaper`
 - Notification Daemon
@@ -62,4 +62,3 @@ fc-cache -fv
 
 [^1]: As a lifelong Windows/MacOS user i didn't want to switch to Linux fully. therefore i started with using an VM. 
 Hyprland is usually associated with **Kitty** terminal. But VM doesn't seems to allow GPU Passthrough. So i am using CPU renderer based terminal for now. I will update this once i started using real hardware instead of VM
-[^2]: Nothing here to see yet
