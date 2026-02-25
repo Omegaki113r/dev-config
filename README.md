@@ -4,12 +4,24 @@
 
 # Setup
 - Update/Upgrate OS
-> `sudo pacman -Syu`
+
+```bash
+sudo pacman -Syu
+```
+
 - Install Hyprland
-> `sudo pacman -S hyprland`
+```bash
+sudo pacman -S hyprland
+```
+
 - Install Terminal
+
 ### Foot
-> `sudo pacman -S foot` [^1]
+```bash
+sudo pacman -S foot
+``` 
+[^1]
+
 ### Kitty
 > `sudo pacman -S kitty` [^2]
 - Wallpaper utility
