@@ -60,7 +60,28 @@ sudo pacman -S git
     ```bash
     yay -S librewolf
     ```
+- OpenSSH
+```bash
+sudo pacman -S openssh
+```
 ---
+# Configure & Authenticate with github
+```bash
+ssh-keygen -t ed25519 -C <EMAIL ADDRESS>
+```
+```bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+- Copy generated SSH key to clipboard and add the key to github
+```bash
+ssh -T git@github.com
+```
+```bash
+git config --global user.name <GITHUB USERNAME>
+git config --global user.email <GITHUB EMAIL>
+```
+
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
