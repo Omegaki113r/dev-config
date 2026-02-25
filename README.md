@@ -15,13 +15,12 @@ sudo pacman -S hyprland
 ```
 
 - Install Terminal [^1]
-
--- Foot
+    - Foot
 ```bash
 sudo pacman -S foot
 ``` 
 
-### Kitty
+    - Kitty
 > `sudo pacman -S kitty`
 - Wallpaper utility
 > `sudo pacman -S hyprpaper`
