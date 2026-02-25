@@ -48,7 +48,6 @@ sudo pacmand -S neovim
 ```bash 
 sudo pacman -S git
 ```
-
 - AUR Helper
 [Jguer/yay](https://github.com/Jguer/yay)
 ```bash
@@ -57,6 +56,12 @@ sudo pacman -S git
     cd yay
     makepkg -si
 ```
+- Web Browser
+    * LibreWolf
+    ```bash
+    yay -S librewolf
+    ```
+
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
