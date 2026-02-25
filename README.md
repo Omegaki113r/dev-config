@@ -20,10 +20,16 @@ sudo pacman -S hyprland
 sudo pacman -S foot
 ``` 
 
+
     - Kitty
-> `sudo pacman -S kitty`
+```bash
+sudo pacman -S kitty
+```
+
 - Wallpaper utility
-> `sudo pacman -S hyprpaper`
+```bash
+sudo pacman -S hyprpaper
+```
 - Notification Daemon
 > `sudo pacman -S swaync`
 - Application Launcher
