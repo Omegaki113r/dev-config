@@ -3,6 +3,7 @@
 - [Setup](#setup)
 - [Authenticate with github](#authenticate-with-github)
 - [Installing JetBrainsMono NerdFont](#installing-jetbrainsmono-nerdfont)
+- [Configuring Shared Directory](#configuring-shared-directory)
 ---
 # Prerequisites
 - Minimal setup of Linux
@@ -135,7 +136,28 @@ fc-cache -fv
 ```bash
 fc-list | grep -i JetBrainsMono
 ```
-
+# Configuring Shared Directory
+- Install OpenVM Tools
+```bash
+sudo pacman -S open-vm-tools
+```
+- Enable and Start Open VM tools
+```bash
+sudo systemctl enable vmtoolsd.service
+sudo systemctl start vmtoolsd.service
+```
+- Create mount point
+```bash
+sudo mkdir -p /mnt/hgfs
+```
+- Check shared directory
+```bash
+vmware-hgfsclient
+```
+- Mounting Shared directory
+```bash
+vmhgfs-fuse -o allow_other -o auto_unmount .host:/<Shared Directory Name> /mnt/hgfs
+```
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
