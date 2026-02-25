@@ -4,12 +4,11 @@
 
 # Setup
 - Update/Upgrate OS
-
-`sudo pacman -Syu`
+> `sudo pacman -Syu`
 - Install Hyprland
-`sudo pacman -S hyprland`
+> `sudo pacman -S hyprland`
 - Install Terminal
-`sudo pacman -S foot` [^1]
+> `sudo pacman -S foot` [^1]
 
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
