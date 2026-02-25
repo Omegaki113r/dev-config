@@ -95,9 +95,10 @@ git config --global user.email <GITHUB EMAIL>
     git remote set-url origin git@github.com:<USERNAME>/<REPOSITORY>.git
     ```
 - If passphrase added during ssh-keygen and needs to automate the submitting passphrase
-```bash
-touch ~/.ssh/config
-```
+    * Create a config file
+    ```bash
+    touch ~/.ssh/config
+    ```
     * Inside the config file
     ```bash
     Host github.com
