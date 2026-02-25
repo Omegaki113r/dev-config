@@ -25,7 +25,7 @@
 - Text Editor
 > `sudo pacmand -S neovim`
 - Git
-> ```bash sudo pacman -S git`
+> `bash sudo pacman -S git`
 - AUR Helper
 [Jguer/yay](https://github.com/Jguer/yay)
 > ```bash
