@@ -74,6 +74,11 @@ sudo pacman -S openssh
 ```bash
 sudo pacman -S wget
 ```
+- Compression & Uncompression
+```bash
+sudo pacman -S zip
+sudo pacman -S unzip
+```
 # Authenticate with github
 - Generate SSH key
 ```bash
