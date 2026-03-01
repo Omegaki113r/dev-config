@@ -1,6 +1,7 @@
 import Quickshell
 import QtQuick
 import QtQuick.Layouts
+import Qt5Compat.GraphicalEffects
 
 PanelWindow {
     screen: Quickshell.screens.find(s => s.name == "HDMI-A-1")
@@ -12,11 +13,27 @@ PanelWindow {
     implicitHeight: 30
 //    color: "#22FFFFFF"
     RowLayout {
-	anchors.fill: parent
-        Image {
-	    Layout.leftMargin: 20
-	    source: "assets/images/title_logo.png"
-	    sourceSize.height: parent.height - 4
+	    anchors.fill: parent
+        Rectangle {
+            height: parent.height
+            Image {
+                id: image_omega_logo
+	            source: "assets/images/title_logo.png"
+                mipmap: true
+                fillMode: Image.PreserveAspectFit
+                sourceSize.height: parent.height
+                visible: false
+                smooth: false
+            }
+            OpacityMask {
+                anchors.fill: image_omega_logo
+                source: image_omega_logo
+                maskSource: Rectangle {
+                    width: image_omega_logo.width
+                    height: image_omega_logo.height
+                    radius: width / 2
+                }
+            }
         }
 	// Rectangle { width:1; height: 16; color: "#AAAAAA" }
 	Text {
