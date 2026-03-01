@@ -16,11 +16,7 @@ sudo pacman -Syu
 ```bash
 sudo pacman -S hyprland
 ```
-- Install Terminal [^1]
-    * Foot
-    ```bash
-    sudo pacman -S foot
-    ```
+- Install Terminal
     * Kitty
     ```bash
     sudo pacman -S kitty
@@ -165,10 +161,3 @@ vmhgfs-fuse -o allow_other -o auto_unmount .host:/<Shared Directory Name> /mnt/h
 ```
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-
-
-
-
-[^1]: As a lifelong Windows/MacOS user i didn't want to switch to Linux fully. therefore i started with using an VM. 
-Hyprland is usually associated with **Kitty** terminal. But VM doesn't seems to allow GPU Passthrough. So i am using CPU renderer based terminal for now. I will update this once i started using real hardware instead of VM
