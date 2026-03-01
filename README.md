@@ -75,6 +75,18 @@ sudo pacman -S wget
 sudo pacman -S zip
 sudo pacman -S unzip
 ```
+- CMake
+```bash
+sudo pacman -S cmake
+```
+- GIMP
+```bash
+sudo pacman -S gimp
+```
+- Quickshell
+```bash
+sudo pacman -S quickshell
+```
 # Authenticate with github
 - Generate SSH key
 ```bash
