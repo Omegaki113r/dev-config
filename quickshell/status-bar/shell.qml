@@ -13,8 +13,10 @@ PanelWindow {
     implicitHeight: 30
 //    color: "#22FFFFFF"
     RowLayout {
-	    anchors.fill: parent
+        anchors.fill: parent
+        spacing: 30
         Rectangle {
+            width: 30
             height: parent.height
             Image {
                 id: image_omega_logo
@@ -35,7 +37,10 @@ PanelWindow {
                 }
             }
         }
-	    // Rectangle { width:1; height: 16; color: "#AAAAAA" }
+        Text {
+            text: "0m3g4"
+        }
+        Rectangle { width:1; height: 16; color: "#AAAAAA" }
 	    Text {
 	        id: text_clock
 	        Layout.horizontalStretchFactor: 1
