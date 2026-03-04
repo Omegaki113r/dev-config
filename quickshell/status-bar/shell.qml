@@ -16,18 +16,20 @@ PanelWindow {
         anchors.fill: parent
         anchors.leftMargin: 10
         anchors.rightMargin: 10 
+        anchors.topMargin: 5
+        anchors.bottomMargin: 5
         spacing: 10
         Rectangle {
             width: 55
-            height: 40
+            height: 30
             color: "#ff1d2021"
-            topLeftRadius: 10
-            topRightRadius: 10
-            bottomRightRadius: 10
-            bottomLeftRadius: 10
+            topLeftRadius: 20
+            topRightRadius: 20
+            bottomRightRadius: 20
+            bottomLeftRadius: 20
             Rectangle {
-                width: 30
-                height: 30
+                width: 25
+                height: 25
                 anchors.centerIn: parent
                 color: "#00000000"
                 Image {
