@@ -53,22 +53,9 @@ PanelWindow {
                 }
             }
         }
-        Rectangle {
-            width: 100
-            height: 40
-            color: "#ff1d2021"
-            topLeftRadius: 10
-            topRightRadius: 10
-            bottomRightRadius: 10
-            bottomLeftRadius: 10
-            Text {
-                text: "0m3g4"
-                color: "#ffFFFFFF"
-                anchors.centerIn: parent
-            }
-        }
         Rectangle { width:1; height: 16; color: "#AAAAAA" }
         Rectangle { Layout.fillWidth: true; Layout.horizontalStretchFactor: 1 }
+        Rectangle { width:1; height: 16; color: "#AAAAAA" }
         Rectangle {
             width: 150
             height: 40
