@@ -87,6 +87,10 @@ sudo pacman -S gimp
 ```bash
 sudo pacman -S quickshell
 ```
+- less
+```bash
+sudo pacman -S less
+```
 # Authenticate with github
 - Generate SSH key
 ```bash
