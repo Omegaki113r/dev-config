@@ -68,7 +68,7 @@ PanelWindow {
 	        Layout.horizontalStretchFactor: 1
             Text {
 	            id: text_clock
-	            text: Qt.formatDateTime(new Date(), "ddd, MMM dd | HH:mm")
+	            text: Qt.formatTime(new Date(), "HH:mm AP")
                 color: "#ffFFFFFF"
                 anchors.centerIn: parent
                 horizontalAlignment: Text.AlignRight
@@ -76,7 +76,7 @@ PanelWindow {
 	                interval: 1000
 		            running: true
 		            repeat: true
-		            onTriggered: text_clock.text = Qt.formatDateTime(new Date(), "ddd, MMM dd | HH:mm")
+		            onTriggered: text_clock.text = Qt.formatTime(new Date(), "HH:mm AP")
 	            }
             }
         }
