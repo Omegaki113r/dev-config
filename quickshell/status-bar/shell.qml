@@ -6,9 +6,10 @@ import Qt5Compat.GraphicalEffects
 PanelWindow {
     screen: Quickshell.screens.find(s => s.name == "HDMI-A-1")
     anchors {
+        left: true
         top: true
-	    left: true
-	    right: true
+        right: true
+        bottom: false
     }
     implicitHeight: 40
     color: "transparent"
