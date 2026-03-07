@@ -21,7 +21,7 @@ PanelWindow {
         anchors.bottomMargin: 5
         spacing: 10
         Rectangle {
-            width: 55
+            width: 100
             height: 30
             color: "#ff1d2021"
             topLeftRadius: 20
@@ -58,13 +58,13 @@ PanelWindow {
         Rectangle { Layout.fillWidth: true; Layout.horizontalStretchFactor: 1 }
         Rectangle { width:1; height: 16; color: "#AAAAAA" }
         Rectangle {
-            width: 150
-            height: 40
+            width: 100
+            height: 30
             color: "#ff1d2021"
-            topLeftRadius: 10
-            topRightRadius: 10
-            bottomRightRadius: 10
-            bottomLeftRadius: 10
+            topLeftRadius: 20
+            topRightRadius: 20
+            bottomRightRadius: 20
+            bottomLeftRadius: 20
 	        Layout.horizontalStretchFactor: 1
             Text {
 	            id: text_clock
