@@ -71,7 +71,6 @@ PanelWindow {
 	            text: Qt.formatTime(new Date(), "HH:mm AP")
                 color: "#ffFFFFFF"
                 anchors.centerIn: parent
-                horizontalAlignment: Text.AlignRight
 	            Timer {
 	                interval: 1000
 		            running: true

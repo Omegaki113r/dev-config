@@ -15,7 +15,7 @@ PanelWindow {
         right: true
         bottom: true
     }
-    implicitHeight: 20
+    implicitHeight: 40
     color: "transparent"
     Rectangle {
         id: workspace_bar_background
@@ -28,34 +28,31 @@ PanelWindow {
         radius: 32
     }
 
-    Row {
+    RowLayout {
         anchors { 
-            centerIn: parent
-            leftMargin: 10
-            rightMargin: 10 
-            topMargin: 5
-            bottomMargin: 5
+            centerIn: parent 
         }    
         spacing: 10
         Repeater {
-            model:  9
+            model:  10
             Rectangle {
-                width: 25
-                height: 20
+                width: 75
+                height: 25
             
                 property var workspace: Hyprland.workspaces.values.find(w=>w.id === index + 1) ?? null
                 property bool isActive: Hyprland.focusedWorkspace?.id === (index + 1)
                 property bool hasWindows: wokspace !== null
 
-                topLeftRadius: 5
-                topRightRadius: 5
-                bottomRightRadius: 5
-                bottomLeftRadius: 5
+                topLeftRadius: 15
+                topRightRadius: 15
+                bottomRightRadius: 15
+                bottomLeftRadius: 15
 
-                color: isActive ? "green" : "red"
+                color: "#32302F"
                 Text {
                     text: index + 1
-                    anchors { centerIn: parent }
+                    color: isActive ? "#D65D0E" : "#98971A"
+                    anchors { fill: parent }
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                 }
