@@ -5,8 +5,10 @@ import Qt5Compat.GraphicalEffects
 import Quickshell
 
 Item {
+    required property ShellScreen screen
     PanelWindow {
         screen: Quickshell.screens.find(s => s.name == "HDMI-A-1")
+        // screen: screen
         anchors {
             left: true
             top: true

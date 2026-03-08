@@ -5,19 +5,20 @@ import Qt5Compat.GraphicalEffects
 import Quickshell.Wayland
 import Quickshell.Hyprland
 
-Item {
-    required property var indices
-    PanelWindow {
-        WlrLayershell.namespace: "workspace_bar_window"
-        screen: Quickshell.screens.find(s => s.name == "HDMI-A-1")
-        anchors {
-            left: true
-            top: false
-            right: true
-            bottom: true
-        }
-        implicitHeight: 40
-        color: "#00FFFFFF"
+PanelWindow {
+    required property var modelData
+    required property var in_indices
+    WlrLayershell.namespace: "workspace_bar_window"
+    // screen: Quickshell.screens.find(s => s.name == "HDMI-A-1")
+    screen: modelData
+    anchors {
+        left: true
+        top: false
+        right: true
+        bottom: true
+    }
+    implicitHeight: 40
+    color: "transparent"
         
         RowLayout {
             anchors { 
