@@ -74,13 +74,13 @@ Item {
                 topRightRadius: 20
                 bottomRightRadius: 20
                 bottomLeftRadius: 20
-                color: "#ff1d2021"
+                color: "#282828"
             
                 Text {
 	                id: text_clock
                     anchors { centerIn: parent }
 	                text: Qt.formatTime(new Date(), "HH:mm AP")
-                    color: "#ffFFFFFF"
+                    color: "#d79921"
             
                     Timer {
 	                    interval: 1000
