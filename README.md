@@ -4,6 +4,7 @@
 - [Authenticate with github](#authenticate-with-github)
 - [Installing JetBrainsMono NerdFont](#installing-jetbrainsmono-nerdfont)
 - [Configuring Shared Directory](#configuring-shared-directory)
+- [Colors](#colors)
 ---
 # Prerequisites
 - Minimal setup of Linux
@@ -175,5 +176,40 @@ vmware-hgfsclient
 ```bash
 vmhgfs-fuse -o allow_other -o auto_unmount .host:/<Shared Directory Name> /mnt/hgfs
 ```
+# Colors
+[GruvBox](https://www.figma.com/community/file/840895380520234275/gruvbox-syntax-highlighting)
+- Dark
+    * bg
+    * red
+    * green
+    * yellow
+    * blue
+    * purple
+    * aqua
+    * gray
+    * gray
+    * red
+    * green
+    * yellow
+    * blue
+    * purple
+    * aqua
+    * fg
+    * bg0_h
+    * bg0
+    * bg1
+    * bg2
+    * bg3
+    * bg4
+    * gray
+    * orange
+    * bg0_s
+    * fg4
+    * fg3
+    * fg2
+    * fg1
+    * fg0
+    * orange
+- Light
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
