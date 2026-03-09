@@ -9,7 +9,6 @@ PanelWindow {
     required property var modelData
     required property var in_indices
     WlrLayershell.namespace: "workspace_bar_window"
-    // screen: Quickshell.screens.find(s => s.name == "HDMI-A-1")
     screen: modelData
     anchors {
         left: true
@@ -41,7 +40,7 @@ PanelWindow {
                 color: "#282828"
                     
                 Text {
-                    text: index + 1
+                    text: modelData
                     color: isActive ? "#d79921" : "#928374"
                     anchors { fill: parent }
                     horizontalAlignment: Text.AlignHCenter
