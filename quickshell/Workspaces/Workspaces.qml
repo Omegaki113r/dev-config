@@ -27,8 +27,8 @@ PanelWindow {
         Repeater {
             model:  in_indices
             Rectangle {
-                property var workspace: Hyprland.workspaces.values.find(w=>w.id === index + 1) ?? null
-                property bool isActive: Hyprland.focusedWorkspace?.id === (index + 1)
+                property var workspace: Hyprland.workspaces.values.find(w=>w.id === modelData) ?? null
+                property bool isActive: Hyprland.focusedWorkspace?.id === (modelData)
                 property bool hasWindows: workspace !== null
                    
                 width: 75
