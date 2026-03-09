@@ -5,8 +5,8 @@ import Qt5Compat.GraphicalEffects
 import Quickshell
 
 PanelWindow {
-    required property ShellScreen screen
-    screen: screen
+    required property ShellScreen in_screen
+    screen: in_screen
     anchors {
         left: true
         top: true
