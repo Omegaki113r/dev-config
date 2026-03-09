@@ -33,7 +33,7 @@ PanelWindow {
         topRightRadius: 20
         bottomRightRadius: 20
         bottomLeftRadius: 20
-        color: "#ff1d2021"
+        color: "#282828"
             
         Rectangle {
             width: 25
