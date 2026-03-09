@@ -6,10 +6,10 @@ import Quickshell.Wayland
 import Quickshell.Hyprland
 
 PanelWindow {
-    required property var modelData
+    required property ShellScreen in_screen
     required property var in_indices
     WlrLayershell.namespace: "workspace_bar_window"
-    screen: modelData
+    screen: in_screen
     anchors {
         left: true
         top: false
