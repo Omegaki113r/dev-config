@@ -1,12 +1,14 @@
-import Quickshell
 import QtQuick
 import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
-import Quickshell.Wayland
+
+import Quickshell
 import Quickshell.Hyprland
+import Quickshell.Wayland
 
 PanelWindow {
     required property ShellScreen in_screen
+    required property var in_workspaces
     required property var in_indices
     WlrLayershell.namespace: "workspace_bar_window"
     screen: in_screen
@@ -18,7 +20,7 @@ PanelWindow {
     }
     implicitHeight: 40
     color: "transparent"
-        
+    
     RowLayout {
         anchors { 
             centerIn: parent 
@@ -26,6 +28,7 @@ PanelWindow {
         spacing: 10
         Repeater {
             model:  in_indices
+            // model: in_workspaces
             Rectangle {
                 property var workspace: Hyprland.workspaces.values.find(w=>w.id === modelData) ?? null
                 property bool isActive: Hyprland.focusedWorkspace?.id === (modelData)
@@ -45,6 +48,12 @@ PanelWindow {
                     anchors { fill: parent }
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
+                    
+                    MouseArea {
+                        anchors { fill: parent }
+                        acceptedButtons: Qt.LeftButton
+                        onClicked: (mouse) => { /* in_workspace[index].activate(); */ }
+                    }
                 }
             }
         }
