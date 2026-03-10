@@ -3,8 +3,13 @@ import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
 
 import Quickshell
+import Quickshell.Io
 
 PanelWindow {
+    property int cpu_usage
+    property var last_cpu_total
+    property var last_cpu_idle
+    property int mem_usage
     required property ShellScreen in_screen
     screen: in_screen
     anchors {
@@ -64,6 +69,57 @@ PanelWindow {
     }
     Rectangle { width:1; height: 16; color: "#AAAAAA" }
     Rectangle { Layout.fillWidth: true; Layout.horizontalStretchFactor: 1 }
+    Rectangle { width:1; height: 16; color: "#AAAAAA" }
+    Rectangle {
+        width: 150
+        height: 30
+        topLeftRadius: 20
+        topRightRadius: 20
+        bottomRightRadius: 20
+        bottomLeftRadius: 20
+        color: "#282828"
+
+        RowLayout {
+            anchors {
+                fill: parent
+                leftMargin: 10
+                rightMargin: 10 
+                topMargin: 5
+                bottomMargin: 5
+            }
+            spacing: 10
+
+            Text {
+                text: "\ue266"
+                Layout.fillWidth: true
+                Layout.horizontalStretchFactor: 1
+                color: "#d79921"
+            } 
+            
+            Text {
+                text: mem_usage + "%"
+                Layout.fillWidth: true
+                Layout.horizontalStretchFactor: 1
+                color: "#d79921"
+            }
+            
+            Rectangle { width:1; height: 16; color: "#d79921" }
+            
+            Text {
+                text: "\uf4bc"
+                Layout.fillWidth: true
+                Layout.horizontalStretchFactor: 1
+                color: "#d79921"
+            } 
+            
+            Text {
+                text: cpu_usage + "%"
+                Layout.fillWidth: true
+                Layout.horizontalStretchFactor: 1
+                color: "#d79921"
+            }
+        }
+    }
     Rectangle { width:1; height: 16; color: "#AAAAAA" }
     Rectangle {
         width: 30
@@ -239,6 +295,47 @@ PanelWindow {
                     onTriggered: text_clock.text = Qt.formatTime(new Date(), "HH:mm AP")
                 }
             }
+        }
+    }
+    Process {
+        id: cpuProc
+        command: ["sh", "-c", "head -1 /proc/stat"]
+        stdout: SplitParser {
+            onRead: data => {
+                if (!data) return
+                var p = data.trim().split(/\s+/)
+                var idle = parseInt(p[4]) + parseInt(p[5])
+                var total = p.slice(1, 8).reduce((a, b) => a + parseInt(b), 0)
+                if (last_cpu_total > 0) {
+                    cpu_usage = Math.round(100 * (1 - (idle - last_cpu_idle) / (total - last_cpu_total)))
+                }
+                last_cpu_total = total
+                last_cpu_idle = idle
+            }
+        }
+        Component.onCompleted: running = true
+    }
+    Process {
+        id: memProc
+        command: ["sh", "-c", "free | grep Mem"]
+        stdout: SplitParser {
+            onRead: data => {
+                if (!data) return
+                var parts = data.trim().split(/\s+/)
+                var total = parseInt(parts[1]) || 1
+                var used = parseInt(parts[2]) || 0
+                mem_usage = Math.round(100 * used / total)
+            }
+        }
+        Component.onCompleted: running = true
+    }
+    Timer {
+        interval: 2000
+        running: true
+        repeat: true
+        onTriggered: {
+            cpuProc.running = true
+            memProc.running = true
         }
     }
 }
