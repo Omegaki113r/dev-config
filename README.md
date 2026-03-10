@@ -5,6 +5,7 @@
 - [Installing JetBrainsMono NerdFont](#installing-jetbrainsmono-nerdfont)
 - [Configuring Shared Directory](#configuring-shared-directory)
 - [Colors](#colors)
+- [Audio](#audio)
 ---
 # Prerequisites
 - Minimal setup of Linux
@@ -91,6 +92,10 @@ sudo pacman -S quickshell
 - less
 ```bash
 sudo pacman -S less
+```
+- pavucontrol
+```bash
+sudo pacman -S pavucontrol
 ```
 # Authenticate with github
 - Generate SSH key
@@ -211,5 +216,14 @@ vmhgfs-fuse -o allow_other -o auto_unmount .host:/<Shared Directory Name> /mnt/h
     * fg0
     * orange
 - Light
+# Audio
+- Listing all available audio devices
+```bash
+pactl list short sinks
+```
+- Setting default output
+```bash
+pactl set-default-sink <OUTPUT DEVICE GOES HERE>
+```
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
