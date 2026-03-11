@@ -4,6 +4,7 @@ import Qt5Compat.GraphicalEffects
 
 import Quickshell
 import Quickshell.Io
+import Quickshell.Hyprland
 
 PanelWindow {
     property int cpu_usage
@@ -68,6 +69,15 @@ PanelWindow {
         }
     }
     Rectangle { width:1; height: 16; color: "#AAAAAA" }
+    Rectangle { Layout.fillWidth: true; Layout.horizontalStretchFactor: 1 }
+    Rectangle {
+        anchors { centerIn: parent }
+        Text {
+            text: Hyprland.activeToplevel != null ? Hyprland.activeToplevel.title : " "
+            anchors { centerIn: parent }
+            color: "#FFFFFF"            
+        }
+    } 
     Rectangle { Layout.fillWidth: true; Layout.horizontalStretchFactor: 1 }
     Rectangle { width:1; height: 16; color: "#AAAAAA" }
     Rectangle {
