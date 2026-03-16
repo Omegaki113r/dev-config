@@ -76,8 +76,14 @@ PanelWindow {
         }
         Rectangle { width:1; height: 16; color: "#AAAAAA" }
         Rectangle { Layout.fillWidth: true; Layout.horizontalStretchFactor: 1 }
-        Rectangle {
+        Pill {
+            in_width: Hyprland.activeToplevel != null ? Hyprland.activeToplevel.title.length * 10 : " ".length * 10
+            in_height: 30
+
             anchors { centerIn: parent }
+
+            in_border_radius: 20
+
             Text {
                 text: Hyprland.activeToplevel != null ? Hyprland.activeToplevel.title : " "
                 anchors { centerIn: parent }
