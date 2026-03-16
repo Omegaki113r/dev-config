@@ -6,6 +6,8 @@ import Quickshell
 import Quickshell.Io
 import Quickshell.Hyprland
 
+import "../Pill"
+
 PanelWindow {
     property int cpu_usage
     property var last_cpu_total
@@ -178,14 +180,11 @@ PanelWindow {
             }
         }
         Rectangle { width:1; height: 16; color: "#AAAAAA" }
-        Rectangle {
-            width: 30
-            height: 30
-            topLeftRadius: 20
-            topRightRadius: 20
-            bottomRightRadius: 20
-            bottomLeftRadius: 20
-            color: "#282828"
+        Pill {
+            in_width: 30
+            in_height: 30
+
+            in_border_radius: 20
 
             Text {
                 anchors { centerIn: parent }
