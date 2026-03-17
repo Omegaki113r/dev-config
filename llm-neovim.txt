@@ -1,0 +1,159 @@
+With Neovim + local LLM, you can get Copilot-style coding suggestions fully offline. Your 64 GB RAM + AMD Radeon RX 6800 XT is more than enough for strong coding models.
+
+I'll show a stable Arch + Neovim setup used by many developers.
+
+1. Run a local coding LLM
+
+Use Ollama as the model server.
+
+Install
+sudo pacman -S ollama
+
+Start it:
+
+systemctl --user start ollama
+Install a coding model
+
+Best choices:
+
+Qwen2.5-Coder (best overall)
+
+DeepSeek Coder
+
+StarCoder2
+
+Example:
+
+ollama run qwen2.5-coder:14b
+
+This downloads and starts the model.
+
+2. Install Neovim autocomplete plugins
+
+You'll combine:
+
+completion engine
+
+LLM backend
+
+Typical stack:
+
+Neovim
+ ├─ nvim-cmp
+ ├─ cmp-nvim-lsp
+ └─ cmp-ai (Ollama)
+3. Install plugins
+
+Example using lazy.nvim.
+
+Add:
+
+{
+  "tzachar/cmp-ai",
+  dependencies = {"hrsh7th/nvim-cmp"},
+}
+4. Configure LLM completion
+
+Example config:
+
+require("cmp_ai.config").setup({
+  provider = "Ollama",
+  provider_options = {
+    model = "qwen2.5-coder:14b",
+    endpoint = "http://localhost:11434/api/generate",
+  },
+})
+
+Then register it with nvim-cmp:
+
+local cmp = require('cmp')
+
+cmp.setup({
+  sources = {
+    { name = 'cmp_ai' },
+    { name = 'nvim_lsp' },
+    { name = 'buffer' },
+  }
+})
+
+Now Neovim will request inline suggestions from your local LLM.
+
+5. Add chat / code explanation
+
+For ChatGPT-style interaction inside Neovim install:
+
+ChatGPT.nvim
+
+CodeCompanion.nvim
+
+Example plugin:
+
+{
+  "olimorris/codecompanion.nvim"
+}
+
+Configure it to use Ollama.
+
+This gives commands like:
+
+:CodeCompanion
+
+Features:
+
+explain code
+
+refactor
+
+generate tests
+
+ask questions about current file
+
+6. Enable GPU acceleration (important for AMD)
+
+Install ROCm:
+
+sudo pacman -S rocm-opencl-runtime rocm-hip-runtime
+
+Then restart Ollama.
+
+Your AMD Radeon RX 6800 XT will accelerate inference.
+
+7. Best models for Neovim coding
+Model	RAM usage	Speed
+Qwen2.5-Coder 14B	~10-12GB	fast
+DeepSeek-Coder 6.7B	~6GB	very fast
+StarCoder2 15B	~12GB	medium
+
+Your system can also run 32B models.
+
+8. Pro developer setup (recommended)
+Neovim
+ ├─ lazy.nvim
+ ├─ nvim-cmp
+ ├─ cmp-ai
+ ├─ treesitter
+ └─ codecompanion.nvim
+        ↓
+     Ollama
+        ↓
+ Qwen2.5-Coder 14B
+
+This gives:
+
+inline completion
+
+AI refactor
+
+code explanation
+
+local privacy
+
+✅ If you want, I can also show:
+
+the exact Neovim config used by many AI-powered dev setups
+
+how to get true Copilot-style ghost text
+
+the fastest coding model for your RX6800XT
+
+how to run a 32B coding model at 20-40 tokens/sec on your machine.
