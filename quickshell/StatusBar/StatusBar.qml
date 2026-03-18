@@ -15,8 +15,8 @@ PanelWindow {
     property int mem_usage
     property var lastRX
     property var lastTX
-    property int upload_speed
-    property int download_speed
+    property double upload_speed
+    property double download_speed
     required property ShellScreen in_screen
     screen: in_screen
     anchors {
@@ -93,7 +93,7 @@ PanelWindow {
         Rectangle { Layout.fillWidth: true; Layout.horizontalStretchFactor: 1 }
         Rectangle { width:1; height: 16; color: "#AAAAAA" }
         Rectangle {
-            width: 150
+            width: 175
             height: 30
             topLeftRadius: 20
             topRightRadius: 20
@@ -198,127 +198,127 @@ PanelWindow {
                 color: "#d79921"
             } 
         }
-        Rectangle {
-            width: 30
-            height: 30
-            topLeftRadius: 20
-            topRightRadius: 20
-            bottomRightRadius: 20
-            bottomLeftRadius: 20
-            color: "#282828"
-
-            Text {
-                anchors { centerIn: parent }
-                text: "\udb86\udc6c"
-                color: "#d79921"
-            } 
-        }
-        Rectangle {
-            width: 30
-            height: 30
-            topLeftRadius: 20
-            topRightRadius: 20
-            bottomRightRadius: 20
-            bottomLeftRadius: 20
-            color: "#282828"
-
-            Text {
-                anchors { centerIn: parent }
-                text: "\udb82\udd70"
-                color: "#d79921"
-            } 
-        }
+//        Rectangle {
+//            width: 30
+//            height: 30
+//            topLeftRadius: 20
+//            topRightRadius: 20
+//            bottomRightRadius: 20
+//            bottomLeftRadius: 20
+//            color: "#282828"
+//
+//            Text {
+//                anchors { centerIn: parent }
+//                text: "\udb86\udc6c"
+//                color: "#d79921"
+//            } 
+//        }
+//        Rectangle {
+//            width: 30
+//            height: 30
+//            topLeftRadius: 20
+//            topRightRadius: 20
+//            bottomRightRadius: 20
+//            bottomLeftRadius: 20
+//            color: "#282828"
+//
+//            Text {
+//                anchors { centerIn: parent }
+//                text: "\udb82\udd70"
+//                color: "#d79921"
+//            } 
+//        }
         Rectangle { width:1; height: 16; color: "#AAAAAA" }
-        Rectangle {
-                width: 30
-                height: 30
-                topLeftRadius: 20
-                topRightRadius: 20
-                bottomRightRadius: 20
-                bottomLeftRadius: 20
-                color: "#282828"
-
-                Text {
-                    anchors { centerIn: parent }
-                    text: "\udb82\udfe1"
-                    color: "#d79921"
-                } 
-            }
-            Rectangle {
-                width: 30
-                height: 30
-                topLeftRadius: 20
-                topRightRadius: 20
-                bottomRightRadius: 20
-                bottomLeftRadius: 20
-                color: "#282828"
-
-                Text {
-                    anchors { centerIn: parent }
-                    text: "\udb80\udc02"
-                    color: "#d79921"
-                } 
-            }
-            Rectangle {
-                width: 30
-                height: 30
-                topLeftRadius: 20
-                topRightRadius: 20
-                bottomRightRadius: 20
-                bottomLeftRadius: 20
-                color: "#282828"
-
-                Text {
-                    anchors { centerIn: parent }
-                    text: "\udb85\udeb5"
-                    color: "#d79921"
-                } 
-            }
-            Rectangle {
-                width: 30
-                height: 30
-                topLeftRadius: 20
-                topRightRadius: 20
-                bottomRightRadius: 20
-                bottomLeftRadius: 20
-                color: "#282828"
-
-                Text {
-                    anchors { centerIn: parent }
-                    text: "\udb85\udebc"
-                    color: "#d79921"
-                } 
-            }
-            Rectangle {
-                width: 30
-                height: 30
-                topLeftRadius: 20
-                topRightRadius: 20
-                bottomRightRadius: 20
-                bottomLeftRadius: 20
-                color: "#282828"
-
-                Text {
-                    anchors { centerIn: parent }
-                    text: "\udb81\udda9"
-                    color: "#d79921"
-                } 
-            }
-            Rectangle {
-                width: 30
-                height: 30
-                topLeftRadius: 20
-                topRightRadius: 20
-                bottomRightRadius: 20
-                bottomLeftRadius: 20
-                color: "#282828"
-
-                Text {
-                    anchors { centerIn: parent }
-                    text: "\udb80\ude02"
-                    color: "#d79921"
-                } 
-            }
+//        Rectangle {
+//                width: 30
+//                height: 30
+//                topLeftRadius: 20
+//                topRightRadius: 20
+//                bottomRightRadius: 20
+//                bottomLeftRadius: 20
+//                color: "#282828"
+//
+//                Text {
+//                    anchors { centerIn: parent }
+//                    text: "\udb82\udfe1"
+//                    color: "#d79921"
+//                } 
+//            }
+//            Rectangle {
+//                width: 30
+//                height: 30
+//                topLeftRadius: 20
+//                topRightRadius: 20
+//                bottomRightRadius: 20
+//                bottomLeftRadius: 20
+//                color: "#282828"
+//
+//                Text {
+//                    anchors { centerIn: parent }
+//                    text: "\udb80\udc02"
+//                    color: "#d79921"
+//                } 
+//            }
+//            Rectangle {
+//                width: 30
+//                height: 30
+//                topLeftRadius: 20
+//                topRightRadius: 20
+//                bottomRightRadius: 20
+//                bottomLeftRadius: 20
+//                color: "#282828"
+//
+//                Text {
+//                    anchors { centerIn: parent }
+//                    text: "\udb85\udeb5"
+//                    color: "#d79921"
+//                } 
+//            }
+//            Rectangle {
+//                width: 30
+//                height: 30
+//                topLeftRadius: 20
+//                topRightRadius: 20
+//                bottomRightRadius: 20
+//                bottomLeftRadius: 20
+//                color: "#282828"
+//
+//                Text {
+//                    anchors { centerIn: parent }
+//                    text: "\udb85\udebc"
+//                    color: "#d79921"
+//                } 
+//            }
+//            Rectangle {
+//                width: 30
+//                height: 30
+//                topLeftRadius: 20
+//                topRightRadius: 20
+//                bottomRightRadius: 20
+//                bottomLeftRadius: 20
+//                color: "#282828"
+//
+//                Text {
+//                    anchors { centerIn: parent }
+//                    text: "\udb81\udda9"
+//                    color: "#d79921"
+//                } 
+//            }
+//            Rectangle {
+//                width: 30
+//                height: 30
+//                topLeftRadius: 20
+//                topRightRadius: 20
+//                bottomRightRadius: 20
+//                bottomLeftRadius: 20
+//                color: "#282828"
+//
+//                Text {
+//                    anchors { centerIn: parent }
+//                    text: "\udb80\ude02"
+//                    color: "#d79921"
+//                } 
+//            }
             Rectangle {
                 width: 30
                 height: 30
@@ -404,11 +404,13 @@ PanelWindow {
                     var tx = parseInt(parts[9]) || 0   // transmitted bytes
 
                     if (lastRX !== undefined) {
-                        var down = (rx - lastRX) / 1024
-                        var up   = (tx - lastTX) / 1024
+                        var down = (rx - lastRX) / (1024*1024)
+                        var up   = (tx - lastTX) / (1024*1024)
 
-                        download_speed = Math.round(down)
-                        upload_speed = Math.round(up)
+                        // download_speed = Math.round(down)
+                        // upload_speed = Math.round(up)
+                        download_speed = down.toFixed(2)
+                        upload_speed = up.toFixed(2)
                     }
 
                     lastRX = rx
