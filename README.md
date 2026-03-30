@@ -97,6 +97,21 @@ sudo pacman -S less
 ```bash
 sudo pacman -S pavucontrol
 ```
+- Primora
+- Vulkan
+```bash
+sudo pacman -S vulkan-icd-loader
+```
+```bash
+sudo pacman -S vulkan-validation-layers
+```
+```bash
+sudo pacman -S vulkan-tools
+```
+> since my GPU is as of 2026-03-31 is AMD Radeon
+```bash
+sudo pacman -S vulkan-radeon
+```
 # Authenticate with github
 - Generate SSH key
 ```bash
