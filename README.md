@@ -100,16 +100,7 @@ sudo pacman -S pavucontrol
 - Primora
 - Vulkan
 ```bash
-sudo pacman -S vulkan-icd-loader
-```
-```bash
-sudo pacman -S vulkan-validation-layers
-```
-```bash
-sudo pacman -S vulkan-tools
-```
-```bash
-sudo pacman -S vulkan-headers
+sudo pacman -S vulkan-devel
 ```
 > since my GPU is as of 2026-03-31 is AMD Radeon
 ```bash
