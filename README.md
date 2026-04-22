@@ -106,6 +106,14 @@ sudo pacman -S vulkan-devel
 ```bash
 sudo pacman -S vulkan-radeon
 ```
+- GDB
+```bash
+sudo pacman -S gdb
+```
+- valgrind
+```bash
+sudo pacman -S valgrind
+```
 # Authenticate with github
 - Generate SSH key
 ```bash
