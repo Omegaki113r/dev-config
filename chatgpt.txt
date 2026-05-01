@@ -1,0 +1,77 @@
+Yes—Neovim/Vim is full of these single-key commands. What you’re noticing (o, i, Esc) is just the tip of the iceberg. The editor is designed around short, composable keystrokes.
+
+Here are the most useful single-key (or nearly single-key) commands that behave like o—i.e., they do something and often drop you into insert mode.
+
+🔤 Entering insert mode in different ways
+
+These all switch to insert mode, but change where you start typing:
+
+i → insert before cursor
+a → insert after cursor
+I → insert at start of line
+A → insert at end of line
+o → new line below + insert
+O → new line above + insert
+s → delete character under cursor + insert
+S → delete whole line + insert (same as cc)
+c → “change” (needs a motion, e.g. cw)
+✂️ Single-key edits (no insert mode)
+
+These don’t enter insert mode, but are just as important:
+
+x → delete character under cursor
+X → delete character before cursor
+dd → delete (cut) line
+yy → yank (copy) line
+p → paste after
+P → paste before
+r → replace a single character (stays in normal mode)
+🔁 Undo / repeat
+u → undo
+Ctrl + r → redo
+. → repeat last change (very powerful)
+🧭 Movement (single keys)
+
+These are core to everything:
+
+h j k l → left/down/up/right
+w → next word
+b → previous word
+0 → start of line
+$ → end of line
+gg → top of file
+G → bottom of file
+⚡ Commands that combine with motions
+
+This is where Vim becomes really powerful:
+
+d → delete
+c → change (delete + insert)
+y → copy
+
+Examples:
+
+dw → delete word
+cw → change word (delete + insert)
+d$ → delete to end of line
+🧠 The key idea
+
+Most Vim commands follow a pattern:
+
+[operator] + [motion]
+
+So instead of memorizing everything, you combine:
+
+d (delete) + w (word) → dw
+c (change) + w → cw
+👍 A few especially useful ones to learn next
+
+If you're just getting comfortable, focus on:
+
+o, O
+i, a, A
+dd, yy, p
+u, .
+w, b, $, 0
+
+If you want, I can give you a minimal “top 20 keys” cheat sheet or a practice routine that gets this into muscle memory quickly.
