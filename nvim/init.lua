@@ -1,13 +1,6 @@
-require("options")
-require("config.lazy")
+require("core.options")
 
-require("lazy").setup({
-    spec = {
-        { 
-            import = "plugins.gruvbox" 
-        },
-    },
-  -- install = { colorscheme = { "habamax" } },
-    checker = { enabled = true },
-})
-
+require("plugins.lazy")
+require("config.config")
+require("core.keymaps")
+require("core.auto_commands")
